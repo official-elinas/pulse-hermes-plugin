@@ -24,6 +24,17 @@ gateway's `~/.hermes/desktop-plugins/` does nothing (verified 2026-08-28).
 3. Check the fetch landed in the server log; the app hot-reloads the file
    (Ctrl+K "Reload desktop plugins" if needed).
 
+## If it stops showing
+
+Check cheapest-first (2026-09-06: cause was #1, file was intact the whole time):
+
+1. Settings → Plugins — "Session Pulse" toggled **off** looks identical to
+   missing: no chip, no pane, no error toast. Toggle back on.
+2. Error toast on load ("Plugin session-pulse failed to load") — fix
+   plugin.js, save, it hot-reloads.
+3. Otherwise redeploy per steps above, verify the hash, then Ctrl+K →
+   Reload desktop plugins.
+
 ## Pricing notes
 
 - z.ai API: flat rates, no peak/off-peak. GLM-5.3-flash 50% promo ends
